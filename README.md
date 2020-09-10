@@ -17,3 +17,6 @@
     
 - [x] Kiírjuk az eredményt
     - Kiírás külön metódusban
+
+## Játékmenet 2.0
+[] Addig játszunk, ameddig ki nem lépünk a játékból.

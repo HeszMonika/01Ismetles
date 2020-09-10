@@ -111,8 +111,20 @@ namespace _01Ismetles
             }
 
             StatisztikaKiiras();
+            StatisztikaFajlba();
 
             Console.ReadKey();
+        }
+
+        private static void StatisztikaFajlba()
+        {
+            StreamWriter sw = new StreamWriter("StatisztikaFajlba.txt");
+            for (int i = 0; i < length; i++)
+            {
+                sw.WriteLine(menet, jatekosNyer, gepNyer);
+            }
+
+            sw.Close();
         }
 
         private static void StatisztikaFajlbol()
@@ -138,7 +150,9 @@ namespace _01Ismetles
 
         private static void StatisztikaKiiras()
         {
-            Console.WriteLine("Menetek száma:{0} Játékos győzelmének száma:{1} Gép győzelmének száma:{2} ", menet, jatekosNyer, gepNyer);
+            Console.WriteLine("Menetek száma:{0}" +
+                "Játékos győzelmének száma:{1}" +
+                "Gép győzelmének száma:{2} ", menet, jatekosNyer, gepNyer);
         }
     }
 }

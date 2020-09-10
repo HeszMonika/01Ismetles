@@ -19,7 +19,13 @@
     - Kiírás külön metódusban
 
 ## Játékmenet 2.0
-[x] Addig játszunk, ameddig ki nem lépünk a játékból.
+- [x] Addig játszunk, ameddig ki nem lépünk a játékból.
 
-[] Statisztika megvalósítása
+- [x] Statisztika megvalósítása
     - gép, játékos, mennyi menet
+
+[] Eredmények fájlba írása és megjelenítése
+    - 1. érték -> menet
+    - 2. érték -> játékos
+    - 3. érték -> gép
+    - Értékek ';'-vel elválasztva

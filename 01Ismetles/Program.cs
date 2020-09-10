@@ -119,10 +119,9 @@ namespace _01Ismetles
         private static void StatisztikaFajlba()
         {
             StreamWriter sw = new StreamWriter("StatisztikaFajlba.txt");
-            for (int i = 0; i < length; i++)
-            {
-                sw.WriteLine(menet, jatekosNyer, gepNyer);
-            }
+
+            sw.WriteLine("{0} {1} {2}", menet, jatekosNyer, gepNyer);
+
 
             sw.Close();
         }

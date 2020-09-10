@@ -10,6 +10,10 @@ namespace _01Ismetles
     {
         static string[] lehetoseg = new string[] { "Kő", "Papír", "Olló" };//Felsoroljuk az elemeit és innen tudjuk , hány elemű.
 
+        static int gepNyer = 0;
+        static int jatekosNyer = 0;
+        static int menet = 0;
+
         static int JatekosValasztas()
         {
             Console.WriteLine("Kő (0), Papír (1), Olló (2)");
@@ -55,11 +59,13 @@ namespace _01Ismetles
                 (ember == 2 && gep == 0)
                 )//Gép nyer.
             {
+                gepNyer++;
                 return 1;
             }
 
             else//Játékos nyer.
             {
+                jatekosNyer++;
                 return 2;
             }
         }
@@ -90,6 +96,8 @@ namespace _01Ismetles
 
             while (tovabb)
             {
+                menet++;
+
                 int gepValasz = GepValasztas();
 
                 int jatekosValasz = JatekosValasztas();
@@ -99,7 +107,14 @@ namespace _01Ismetles
                 tovabb = AkarJatszani();
             }
 
+            StatisztikaKiiras();
+
             Console.ReadKey();
+        }
+
+        private static void StatisztikaKiiras()
+        {
+            Console.WriteLine("Menetek száma:{0} Játékos győzelmének száma:{1} Gép győzelmének száma:{2} ", menet, jatekosNyer, gepNyer);
         }
     }
 }

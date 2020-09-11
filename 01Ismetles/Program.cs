@@ -119,16 +119,14 @@ namespace _01Ismetles
         private static void StatisztikaFajlba()
         {
             //StreamWriter sw = File.AppendText("StatisztikaFajlba.txt");
-
             //sw.WriteLine("{0}; {1}; {2}", menet, jatekosNyer, gepNyer);
+            //sw.Close();
 
             string adat = menet.ToString() + ";" + jatekosNyer.ToString() + ";" + gepNyer.ToString() + ";";
             //FileStream ki = new FileStream("statisztika.txt", FileMode.Append);
             StreamWriter ski = new StreamWriter("statisztika.txt", true);
             ski.WriteLine(adat);
             ski.Close();
-
-            //sw.Close();
         }
 
         private static void StatisztikaFajlbol()
@@ -154,9 +152,9 @@ namespace _01Ismetles
 
         private static void StatisztikaKiiras()
         {
-            Console.WriteLine("Menetek száma:{0}" +
-                "Játékos győzelmének száma:{1}" +
-                "Gép győzelmének száma:{2} ", menet, jatekosNyer, gepNyer);
+            Console.WriteLine("\tMenetek száma:{0}" +
+                "\tJátékos győzelmének száma:{1}" +
+                "\tGép győzelmének száma:{2} ", menet, jatekosNyer, gepNyer);
         }
     }
 }
